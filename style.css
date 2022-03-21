@@ -53,8 +53,8 @@ body {
 .game div {
   border: 3px solid black;
   /* flex: 1200px 1 0; */
-  height: 175px;
-  width: 14%;
+  height: 150px;
+  width: 13%;
   margin: 10px;
   display: inline-block;
 }
@@ -111,6 +111,8 @@ body {
   /* align-self: center;
   justify-self: center; */
   margin-top: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .start {
   /* display: inline-block; */
@@ -121,6 +123,7 @@ body {
   height: auto;
   font-size: 48px;
   font-weight: 700;
+  margin: 0 50px;
 }
 
 .home {
@@ -130,4 +133,5 @@ body {
   height: auto;
   font-size: 48px;
   font-weight: 700;
+  margin: 0 50px;
 }

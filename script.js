@@ -216,7 +216,6 @@ let buttons = document.querySelector(".buttons");
 buttons.addEventListener("click", function (e) {
   // start button that initialializes/reinitializes game
   if (e.target.classList[0] === "start") {
-    console.log(e.target.innerText);
     gameContainer.classList.add("hidden");
     gameContainer.classList.toggle("hidden");
     gameContainer.replaceChildren();
@@ -230,13 +229,13 @@ buttons.addEventListener("click", function (e) {
     createDivsForColors(shuffledColors);
     rules.style.display = "none";
     // change name of start to reset when game starts
-    e.target.innerText = "reset";
-    // toggle home button on
     let homeButton = document.querySelector(".home");
     // toggle home button on
-    homeButton.classList.toggle("hidden");
-  } else if (e.target.classList === "home") {
-    console.log(e.target.innerText);
+    if (homeButton.classList[1]) {
+      homeButton.classList.toggle("hidden");
+    }
+  }
+  if (e.target.classList[0] === "home") {
     let homeButton = document.querySelector(".home");
     // toggle home button off
     homeButton.classList.toggle("hidden");
@@ -248,6 +247,7 @@ buttons.addEventListener("click", function (e) {
     let start = document.querySelector(".start");
     start.innerText = "start";
   }
+
   // else if (e.target.classList.contains("start")) {
   //   console.log("pressed reset: ", e.target.innerText);
   //   gameContainer.replaceChildren();
