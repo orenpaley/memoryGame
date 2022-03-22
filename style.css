@@ -50,13 +50,21 @@ body {
   margin: 0 72px;
 }
 
+.game {
+  display: grid;
+  width: 75%;
+  /* margin-left: auto;
+  margin-right: auto;  */
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .game div {
   border: 3px solid black;
   /* flex: 1200px 1 0; */
-  height: 150px;
-  width: 13%;
-  margin: 10px;
-  display: inline-block;
+  height: 185px;
+  width: 85%;
+  margin: 8px 7px;
+  /* display: inline-block; */
 }
 .back {
   /* generated from https://cssgradient.io/ */
@@ -67,30 +75,6 @@ body {
     rgba(33, 33, 100, 1) 33%,
     rgba(166, 69, 196, 0.9003787350344967) 98%
   );
-}
-/* div.gameCards div {
-  background: linear-gradient(
-    68deg,
-    rgba(131, 58, 180, 1) 0%,
-    rgba(253, 29, 29, 1) 50%,
-    rgba(252, 176, 69, 1) 100%
-  );
-} */
-/* 
-#gameFront div {
-  border: 2px solid black;
-   flex: 1200px 1 0; 
-  height: 175px;
-  width: 14%;
-  margin: 10px;
-  display: inline-block;
-} 
-*/
-
-.game {
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .hidden {
@@ -105,12 +89,14 @@ body {
 
 .buttons {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
   justify-content: center;
   /* flex: 1200px 1 0; */
   /* align-self: center;
   justify-self: center; */
-  margin-top: 15px;
+  margin-top: 45px;
   margin-left: 5px;
   margin-right: 5px;
 }
@@ -123,7 +109,7 @@ body {
   height: auto;
   font-size: 48px;
   font-weight: 700;
-  margin: 0 50px;
+  margin: 25px auto;
 }
 
 .home {
@@ -134,4 +120,27 @@ body {
   font-size: 48px;
   font-weight: 700;
   margin: 0 50px;
+}
+
+.difficulty-group {
+  display: flex;
+  margin-top: 0;
+}
+
+.difficulty input[type="radio"] {
+  opacity: 0.01;
+  z-index: 100;
+}
+
+.difficulty input[type="radio"]:checked + label,
+.Checked + label {
+  background: yellow;
+}
+
+.difficulty label {
+  margin: 15px;
+  padding: 15px;
+  border: 3px solid black;
+  cursor: pointer;
+  z-index: 90;
 }
